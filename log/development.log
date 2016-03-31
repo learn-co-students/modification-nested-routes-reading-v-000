@@ -3742,3 +3742,764 @@ Processing by PostsController#show as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (15.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (9.3ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (9.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (7.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (9.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (7.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 7]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (6.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 9]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (9.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36m (7.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (9.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 13]]
+  [1m[36m (8.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 1]]
+  [1m[36m (10.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (8.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 3]]
+  [1m[36m (9.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2016-03-31 00:23:50.863824"], ["updated_at", "2016-03-31 00:23:50.863824"]]
+  [1m[35m (11.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2016-03-31 00:23:50.878924"], ["updated_at", "2016-03-31 00:23:50.878924"]]
+  [1m[36m (9.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2016-03-31 00:23:50.890823"], ["updated_at", "2016-03-31 00:23:50.890823"]]
+  [1m[35m (10.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["author_id", 4], ["created_at", "2016-03-31 00:23:50.918270"], ["updated_at", "2016-03-31 00:23:50.918270"]]
+  [1m[36m (14.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["author_id", 5], ["created_at", "2016-03-31 00:23:50.936093"], ["updated_at", "2016-03-31 00:23:50.936093"]]
+  [1m[35m (9.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["author_id", 6], ["created_at", "2016-03-31 00:23:50.949179"], ["updated_at", "2016-03-31 00:23:50.949179"]]
+  [1m[36m (10.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2016-03-30 00:00:00.000000"], ["updated_at", "2016-03-31 00:23:50.962994"], ["id", 16]]
+  [1m[35m (9.6ms)[0m  commit transaction
+
+
+Started GET "/" for 104.174.110.160 at 2016-03-31 00:25:02 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (79.2ms)
+Completed 200 OK in 856ms (Views: 822.0ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 00:25:04 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 00:25:04 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:04 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:04 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:04 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:05 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:05 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/4/posts" for 104.174.110.160 at 2016-03-31 00:25:09 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 89ms (Views: 38.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/4/posts" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 34ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:15 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/4/posts" for 104.174.110.160 at 2016-03-31 00:25:17 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 66ms (Views: 60.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/4/posts" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 71ms (Views: 68.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:25:59 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:26:00 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:26:00 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/4/posts" for 104.174.110.160 at 2016-03-31 00:26:06 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 40ms (Views: 37.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 104.174.110.160 at 2016-03-31 00:26:09 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 27ms (Views: 25.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/4" for 104.174.110.160 at 2016-03-31 00:26:16 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered authors/show.html.erb within layouts/application (31.2ms)
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fe99846bbb0>:0x007fe9aa2d7e68>):
+    1: <h1><%= @author.name %></h1>
+    2: <%= link_to "New Post", new_author_post_path(@author) %>
+    3: <p>Posts:</p>
+    4: <% @author.posts.each do |post| %>
+    5:   <div><%= post.title %></div>
+  app/views/authors/show.html.erb:2:in `_app_views_authors_show_html_erb__868737651119032620_70320779605500'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (116.4ms)
+
+
+Started GET "/authors/4" for 104.174.110.160 at 2016-03-31 00:27:37 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (79.6ms)
+Completed 200 OK in 464ms (Views: 396.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 00:27:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 00:27:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/4/posts/new" for 104.174.110.160 at 2016-03-31 00:27:42 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/posts_controller.rb:20:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (12.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (105.0ms)
+
+
+Started GET "/authors/4/posts/new" for 104.174.110.160 at 2016-03-31 00:27:43 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+ArgumentError (When assigning attributes, you must pass a hash as an argument.):
+  app/controllers/posts_controller.rb:20:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (29.0ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (11.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (142.5ms)
+
+
+Started GET "/authors/4/posts/new" for 104.174.110.160 at 2016-03-31 00:27:55 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (48.7ms)
+  Rendered posts/new.html.erb within layouts/application (59.3ms)
+Completed 200 OK in 106ms (Views: 91.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 00:27:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 00:27:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:27:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors" for 104.174.110.160 at 2016-03-31 00:28:37 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 48ms (Views: 41.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/authors/5" for 104.174.110.160 at 2016-03-31 00:28:40 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 5]]
+  Rendered authors/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 65ms (Views: 51.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/5" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 5]]
+  Rendered authors/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 23ms (Views: 21.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:31:56 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/5/posts/new" for 104.174.110.160 at 2016-03-31 00:31:57 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"5"}
+  Rendered posts/_form.html.erb (7.7ms)
+  Rendered posts/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 39ms (Views: 37.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 104.174.110.160 at 2016-03-31 00:36:00 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BYGvS6s/ZygQGqBJZga/zpRsO49p5Icvl571dKnSLVrx9m8L8LvahXUKn1svLJPUffF4RMB0iGLI7k8bdfpt6A==", "post"=>{"author_id"=>"5", "title"=>"My new Post", "description"=>"This is a new post and it should have an author"}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "My New Post"], ["description", "This is a new post and it should have an author"], ["author_id", 5], ["created_at", "2016-03-31 00:36:00.394385"], ["updated_at", "2016-03-31 00:36:00.394385"]]
+  [1m[36m (12.5ms)[0m  [1mcommit transaction[0m
+Redirected to https://learn-rails-dakotalmartinez.c9users.io/posts/17
+Completed 302 Found in 39ms (ActiveRecord: 15.6ms)
+
+
+Started GET "/posts/17" for 104.174.110.160 at 2016-03-31 00:36:00 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.8ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (36.2ms)
+Completed 200 OK in 104ms (Views: 96.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/posts/17" for 104.174.110.160 at 2016-03-31 00:40:16 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.7ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (63.0ms)
+Completed 200 OK in 582ms (Views: 479.0ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 00:40:18 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 00:40:18 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 00:40:18 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 00:40:18 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 00:40:18 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 00:40:18 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 00:40:18 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/5/posts/17/edit" for 104.174.110.160 at 2016-03-31 00:40:20 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"5", "id"=>"17"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  Rendered posts/_form.html.erb (56.2ms)
+  Rendered posts/edit.html.erb within layouts/application (72.7ms)
+Completed 200 OK in 137ms (Views: 133.2ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/17" for 104.174.110.160 at 2016-03-31 00:40:35 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Id0XdXwBI7TGmNZbyIgpZyyFgi8UOLSp0VgMr3HwOTnVqtc1J4WeGaOI6UmBogV9xRjB5L2ou+SOKLbArdh5iw==", "post"=>{"author_id"=>"5", "title"=>"My New Post", "description"=>"This is a new post and it should have an author and her name is Ariana"}, "commit"=>"Update Post", "id"=>"17"}
+  [1m[36mPost Load (1.0ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", "This is a new post and it should have an author and her name is Ariana"], ["updated_at", "2016-03-31 00:40:35.178271"], ["id", 17]]
+  [1m[35m (11.3ms)[0m  commit transaction
+Redirected to https://learn-rails-dakotalmartinez.c9users.io/posts/17
+Completed 302 Found in 27ms (ActiveRecord: 13.1ms)
+
+
+Started GET "/posts/17" for 104.174.110.160 at 2016-03-31 00:40:35 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/5/posts/17/edit" for 104.174.110.160 at 2016-03-31 00:43:17 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"5", "id"=>"17"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  Rendered posts/_form.html.erb (3.5ms)
+  Rendered posts/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 79ms (Views: 76.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/123345/posts/17/edit" for 104.174.110.160 at 2016-03-31 00:43:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123345", "id"=>"17"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  Rendered posts/_form.html.erb (2.3ms)
+  Rendered posts/edit.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 33ms (Views: 31.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/123345/posts/17/edit" for 104.174.110.160 at 2016-03-31 01:07:02 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123345", "id"=>"17"}
+  [1m[36mAuthor Load (1.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 123345]]
+Redirected to https://learn-rails-dakotalmartinez.c9users.io/authors
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 2.8ms)
+
+NoMethodError (undefined method `posts' for nil:NilClass):
+  app/controllers/posts_controller.rb:43:in `edit'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.7ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.1ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (133.8ms)
+
+
+Started GET "/authors/148/posts/17/edit" for 104.174.110.160 at 2016-03-31 01:07:44 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"148", "id"=>"17"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 148]]
+Redirected to https://learn-rails-dakotalmartinez.c9users.io/authors
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.2ms)
+
+NoMethodError (undefined method `posts' for nil:NilClass):
+  app/controllers/posts_controller.rb:43:in `edit'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (16.8ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (97.7ms)
+
+
+Started GET "/authors/148/posts/17/edit" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"148", "id"=>"17"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 148]]
+Redirected to https://learn-rails-dakotalmartinez.c9users.io/authors
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+Completed 302 Found in 23ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/authors" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 37ms (Views: 35.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 01:08:07 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/posts/new" for 104.174.110.160 at 2016-03-31 01:36:28 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 42ms (Views: 30.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/new" for 104.174.110.160 at 2016-03-31 01:38:00 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Rendered posts/_form.html.erb (17.8ms)
+  Rendered posts/new.html.erb within layouts/application (19.6ms)
+Completed 500 Internal Server Error in 39ms (ActiveRecord: 1.1ms)
+
+ActionView::Template::Error (undefined local variable or method `post_author' for #<#<Class:0x000000040e8810>:0x00000004082bf0>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <%= author_id_field(@post) %>
+    3:   
+    4:   <label>Post title:</label><br>
+    5:   <%= f.text_field :title %><br>
+  app/helpers/posts_helper.rb:3:in `author_id_field'
+  app/views/posts/_form.html.erb:2:in `block in _app_views_posts__form_html_erb___3315308956927738985_26502260'
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___3315308956927738985_26502260'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__1554465778496436197_70323487175640'
+
+
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.6ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.5ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /usr/local/rvm/gems/ruby-2.2.2/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (88.4ms)
+
+
+Started GET "/posts/new" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (11.9ms)
+  Rendered posts/new.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 51ms (Views: 37.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 104.174.110.160 at 2016-03-31 01:38:21 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started POST "/posts" for 104.174.110.160 at 2016-03-31 01:38:38 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pQrfGpUHy/UvL6tMjeh05BIsY9C6bAJBGiIpVmUy7ShRfR9azoN2WEo/lF7Ewlj++7EgGxP8DQxFUpM5uRqtmg==", "post"=>{"author_id"=>"6", "title"=>"Horse Ebook # 4", "description"=>"This is the newest horse ebook"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Horse Ebook # 4"], ["description", "This is the newest horse ebook"], ["author_id", 6], ["created_at", "2016-03-31 01:38:38.991557"], ["updated_at", "2016-03-31 01:38:38.991557"]]
+  [1m[36m (12.2ms)[0m  [1mcommit transaction[0m
+Redirected to https://learn-rails-dakotalmartinez.c9users.io/posts/18
+Completed 302 Found in 19ms (ActiveRecord: 12.9ms)
+
+
+Started GET "/posts/18" for 104.174.110.160 at 2016-03-31 01:38:39 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.5ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 37ms (Views: 33.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/authors/6" for 104.174.110.160 at 2016-03-31 01:40:06 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 6]]
+  Rendered authors/show.html.erb within layouts/application (31.4ms)
+Completed 200 OK in 84ms (Views: 80.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/6/posts/new" for 104.174.110.160 at 2016-03-31 01:40:08 +0000
+Cannot render console from 104.174.110.160! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"6"}
+  [1m[35mAuthor Exists (0.4ms)[0m  SELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered posts/_form.html.erb (4.2ms)
+  Rendered posts/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 73ms (Views: 36.1ms | ActiveRecord: 0.6ms)
