@@ -17,7 +17,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if params[:author_id]
+      @post = Post.new(author_id: params[:author_id])
+    else
+      @post = Post.new
+    end
   end
 
   def create
@@ -28,7 +32,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(params.require(:post))
+    @post.update(post_params)
     redirect_to post_path(@post)
   end
 
@@ -39,6 +43,6 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description)
+    params.require(:post).permit(:title, :description, :author_id)
   end
 end
