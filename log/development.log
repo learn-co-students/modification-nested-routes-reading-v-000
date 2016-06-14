@@ -3742,3 +3742,1311 @@ Processing by PostsController#show as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[36m (1.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (2.2ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (2.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011820')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151230232412')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011041')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160113011150')
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[36m (1.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011820')[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151230232412')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011041')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160113011150')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2016-06-14 21:01:00.891143"], ["updated_at", "2016-06-14 21:01:00.891143"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2016-06-14 21:01:00.901948"], ["updated_at", "2016-06-14 21:01:00.901948"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2016-06-14 21:01:00.904700"], ["updated_at", "2016-06-14 21:01:00.904700"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["author_id", 1], ["created_at", "2016-06-14 21:01:00.915599"], ["updated_at", "2016-06-14 21:01:00.915599"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["author_id", 2], ["created_at", "2016-06-14 21:01:00.918095"], ["updated_at", "2016-06-14 21:01:00.918095"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["author_id", 3], ["created_at", "2016-06-14 21:01:00.920569"], ["updated_at", "2016-06-14 21:01:00.920569"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2016-06-13 00:00:00.000000"], ["updated_at", "2016-06-14 21:01:00.922606"], ["id", 3]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 1]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 3]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2016-06-14 21:01:14.730790"], ["updated_at", "2016-06-14 21:01:14.730790"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2016-06-14 21:01:14.733272"], ["updated_at", "2016-06-14 21:01:14.733272"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2016-06-14 21:01:14.735356"], ["updated_at", "2016-06-14 21:01:14.735356"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["author_id", 4], ["created_at", "2016-06-14 21:01:14.743797"], ["updated_at", "2016-06-14 21:01:14.743797"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["author_id", 5], ["created_at", "2016-06-14 21:01:14.746394"], ["updated_at", "2016-06-14 21:01:14.746394"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["author_id", 6], ["created_at", "2016-06-14 21:01:14.748901"], ["updated_at", "2016-06-14 21:01:14.748901"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2016-06-13 00:00:00.000000"], ["updated_at", "2016-06-14 21:01:14.751076"], ["id", 6]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (1.8ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011820')[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151230232412')
+  [1m[36m (0.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011041')[0m
+  [1m[35m (0.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160113011150')
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (1.1ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  select sqlite_version(*)
+  [1m[36m (0.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35m (0.1ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011820')[0m
+  [1m[35m (3.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20151230232412')
+  [1m[36m (0.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011041')[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160113011150')
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2016-06-14 21:02:13.908509"], ["updated_at", "2016-06-14 21:02:13.908509"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2016-06-14 21:02:13.913509"], ["updated_at", "2016-06-14 21:02:13.913509"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2016-06-14 21:02:13.915560"], ["updated_at", "2016-06-14 21:02:13.915560"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["author_id", 1], ["created_at", "2016-06-14 21:02:13.927346"], ["updated_at", "2016-06-14 21:02:13.927346"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["author_id", 2], ["created_at", "2016-06-14 21:02:13.929653"], ["updated_at", "2016-06-14 21:02:13.929653"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["author_id", 3], ["created_at", "2016-06-14 21:02:13.931704"], ["updated_at", "2016-06-14 21:02:13.931704"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2016-06-13 00:00:00.000000"], ["updated_at", "2016-06-14 21:02:13.933813"], ["id", 3]]
+  [1m[35m (0.5ms)[0m  commit transaction
+
+
+Started GET "/authors" for ::1 at 2016-06-14 17:02:46 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 604ms (Views: 591.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:02:47 -0400
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:02:47 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:02:47 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:02:47 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:02:47 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:02:47 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:02:47 -0400
+
+
+Started GET "/authors/4/new" for ::1 at 2016-06-14 17:02:52 -0400
+
+ActionController::RoutingError (No route matches [GET] "/authors/4/new"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/mattcassara/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/mattcassara/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/mattcassara/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (9.1ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (95.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (112.5ms)
+
+
+Started GET "/authors/4" for ::1 at 2016-06-14 17:02:58 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+Completed 404 Not Found in 9ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=4):
+  app/controllers/authors_controller.rb:4:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (105.2ms)
+
+
+Started GET "/authors" for ::1 at 2016-06-14 17:03:01 -0400
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 15ms (Views: 14.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/1" for ::1 at 2016-06-14 17:03:04 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered authors/show.html.erb within layouts/application (1.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:5: syntax error, unexpected '<', expecting keyword_end
+<p>Posts:</p>
+ ^
+/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:7: unknown regexp options - dv
+/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:8: unterminated string meets end of file
+/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/authors/show.html.erb:5: syntax error, unexpected '<', expecting keyword_end
+  app/views/authors/show.html.erb:7: unknown regexp options - dv
+  app/views/authors/show.html.erb:8: unterminated string meets end of file
+  app/views/authors/show.html.erb:8: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (52.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.7ms)
+
+
+Started GET "/authors/1" for ::1 at 2016-06-14 17:03:04 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered authors/show.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms)
+
+SyntaxError (/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:5: syntax error, unexpected '<', expecting keyword_end
+<p>Posts:</p>
+ ^
+/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:7: unknown regexp options - dv
+/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:8: unterminated string meets end of file
+/Users/mattcassara/Development/code/modification-nested-routes-reading-v-000/app/views/authors/show.html.erb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/views/authors/show.html.erb:5: syntax error, unexpected '<', expecting keyword_end
+  app/views/authors/show.html.erb:7: unknown regexp options - dv
+  app/views/authors/show.html.erb:8: unterminated string meets end of file
+  app/views/authors/show.html.erb:8: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (53.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (113.3ms)
+
+
+Started GET "/authors/1" for ::1 at 2016-06-14 17:03:23 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (25.6ms)
+Completed 200 OK in 46ms (Views: 44.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:03:23 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:03:23 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:03:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:03:23 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:03:23 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:03:23 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:03:23 -0400
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-06-14 17:03:26 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendered posts/_form.html.erb (10.6ms)
+  Rendered posts/new.html.erb within layouts/application (13.0ms)
+Completed 200 OK in 32ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-06-14 17:03:36 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendered posts/_form.html.erb (0.9ms)
+  Rendered posts/new.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 16ms (Views: 15.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors" for ::1 at 2016-06-14 17:03:53 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 13ms (Views: 12.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:03:54 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 14ms (Views: 12.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2/posts/new" for ::1 at 2016-06-14 17:03:56 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"2"}
+  Rendered posts/_form.html.erb (1.2ms)
+  Rendered posts/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 29ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-06-14 17:04:23 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z0fjeksZEwOyZ2aaQ1P8er1dBl3DakPu+CRygZKLfVZrOm+6M+9zHDKu5xL97SrzM/0yfrlo63ep2ue8TD3H/A==", "post"=>{"title"=>"asfdsgs", "description"=>"sfsgf"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Asfdsgs"], ["description", "sfsgf"], ["created_at", "2016-06-14 21:04:23.169554"], ["updated_at", "2016-06-14 21:04:23.169554"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 5ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/4" for ::1 at 2016-06-14 17:04:23 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/4/edit" for ::1 at 2016-06-14 17:04:25 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/_form.html.erb (1.8ms)
+  Rendered posts/edit.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/4" for ::1 at 2016-06-14 17:04:25 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2XzRIir16G2bAkzDsIO7c1XSfZa4h+l9ol/Tf8ZltPXVAV3iUgOIchvLzUsOPW3623JJtcKFQeTzoUZCGNMOXw==", "post"=>{"title"=>"Asfdsgs", "description"=>"sfsgf"}, "commit"=>"Update Post", "id"=>"4"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/4
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/4" for ::1 at 2016-06-14 17:04:25 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 18ms (Views: 16.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for ::1 at 2016-06-14 17:04:29 -0400
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:04:30 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 21ms (Views: 19.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:05:06 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:05:06 -0400
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:05:06 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:05:06 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:05:06 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:05:06 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:05:06 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:05:06 -0400
+
+
+Started GET "/authors/2/posts/new" for ::1 at 2016-06-14 17:05:07 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"2"}
+  Rendered posts/_form.html.erb (3.8ms)
+  Rendered posts/new.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 21ms (Views: 20.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for ::1 at 2016-06-14 17:06:16 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NzkRZrigPVHSC4hyvf7P22wjj9U6IWIvB3VTxEztszI7RJ2mwFZdTlLCCfoDQBlS4oO79kAjyrZWi8b5klsJmA==", "post"=>{"author_id"=>"2", "title"=>"NEw post", "description"=>"new dsciprtion!"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "N Ew Post"], ["description", "new dsciprtion!"], ["author_id", 2], ["created_at", "2016-06-14 21:06:16.397022"], ["updated_at", "2016-06-14 21:06:16.397022"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 10ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/posts/5" for ::1 at 2016-06-14 17:06:16 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:06:20 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/2/posts/2" for ::1 at 2016-06-14 17:07:05 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1  [["author_id", 2], ["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2/posts/3" for ::1 at 2016-06-14 17:07:08 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"3"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1  [["author_id", 2], ["id", 3]]
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=3 [WHERE "posts"."author_id" = ?]):
+  app/controllers/posts_controller.rb:13:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (85.0ms)
+
+
+Started GET "/authors/2/posts/1" for ::1 at 2016-06-14 17:07:10 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1  [["author_id", 2], ["id", 1]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=1 [WHERE "posts"."author_id" = ?]):
+  app/controllers/posts_controller.rb:13:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (83.9ms)
+
+
+Started GET "/authors/2/posts/4" for ::1 at 2016-06-14 17:07:13 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1  [["author_id", 2], ["id", 4]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=4 [WHERE "posts"."author_id" = ?]):
+  app/controllers/posts_controller.rb:13:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (39.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (87.3ms)
+
+
+Started GET "/authors/2/posts/5" for ::1 at 2016-06-14 17:07:15 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"5"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1  [["author_id", 2], ["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 15ms (Views: 13.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/5/edit" for ::1 at 2016-06-14 17:07:17 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/_form.html.erb (1.6ms)
+  Rendered posts/edit.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 18ms (Views: 17.7ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/5" for ::1 at 2016-06-14 17:07:21 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7gwvpyi//fLUdSyIDN4PtRaOKKwI7/GmCvb1T9stvNnicaNnUEmd7VS8rQCyYNk8mC4cj3LtWT9bCGByBZsGcw==", "post"=>{"author_id"=>"2", "title"=>"N Ew Post", "description"=>"new dsciprtion!!!"}, "commit"=>"Update Post", "id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?  [["description", "new dsciprtion!!!"], ["updated_at", "2016-06-14 21:07:21.519618"], ["id", 5]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/5
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+
+
+Started GET "/posts/5" for ::1 at 2016-06-14 17:07:21 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/5" for ::1 at 2016-06-14 17:09:16 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (19.7ms)
+Completed 200 OK in 248ms (Views: 219.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:09:17 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:09:17 -0400
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:09:17 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:09:17 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:09:17 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:09:17 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:09:17 -0400
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:09:17 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (9.1ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:09:33 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:09:33 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:09:33 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:09:33 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:09:33 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:09:33 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:09:33 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:09:33 -0400
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:09:37 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:09:37 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:09:37 -0400
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:09:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:09:38 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 14ms (Views: 13.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:09:38 -0400
+
+
+Started GET "/authors/2/posts" for ::1 at 2016-06-14 17:09:53 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 2]]
+  Rendered posts/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2/posts/2" for ::1 at 2016-06-14 17:09:58 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"2", "id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1[0m  [["author_id", 2], ["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2/posts/2/edit" for ::1 at 2016-06-14 17:10:01 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"2", "id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.erb (12.4ms)
+  Rendered posts/edit.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/posts/2" for ::1 at 2016-06-14 17:10:04 -0400
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"EqUF3XcIekokQNeIak1a1VgCoAm81WjX8WFIENTzPRQe2IkdD/4aVaSJVgDU84xc1qKUKsbXwE6gn90tCkWHvg==", "post"=>{"author_id"=>"2", "title"=>"Spam Spam Spam", "description"=>"  It occurred to me that no mat!!!er what cards you are dealt,\r\n  you need to enjoy the small joys. How is this related to Spam, you ask.\r\n  Fair enough. OK, I will tell you something here now...\r\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\r\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\r\n  broken and gray. And here's why this matters...\r\n"}, "commit"=>"Update Post", "id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", "  It occurred to me that no mat!!!er what cards you are dealt,\r\n  you need to enjoy the small joys. How is this related to Spam, you ask.\r\n  Fair enough. OK, I will tell you something here now...\r\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\r\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\r\n  broken and gray. And here's why this matters...\r\n"], ["updated_at", "2016-06-14 21:10:04.968133"], ["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/2
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/posts/2" for ::1 at 2016-06-14 17:10:04 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/1234/posts/2" for ::1 at 2016-06-14 17:10:52 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"1234", "id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1234]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=1234):
+  app/controllers/posts_controller.rb:13:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (49.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (42.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.9ms)
+
+
+Started GET "/authors/1/posts/2" for ::1 at 2016-06-14 17:10:55 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"1", "id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1[0m  [["author_id", 1], ["id", 2]]
+Completed 404 Not Found in 2ms (ActiveRecord: 0.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Post with 'id'=2 [WHERE "posts"."author_id" = ?]):
+  app/controllers/posts_controller.rb:13:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (45.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.0ms)
+
+
+Started GET "/authors/5/" for ::1 at 2016-06-14 17:10:59 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=5):
+  app/controllers/authors_controller.rb:4:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (37.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (92.4ms)
+
+
+Started GET "/authors/2/posts" for ::1 at 2016-06-14 17:11:02 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 2]]
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 16ms (Views: 15.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/224/posts" for ::1 at 2016-06-14 17:11:06 -0400
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"224"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 224]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=224):
+  app/controllers/posts_controller.rb:5:in `index'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (50.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (84.3ms)
+
+
+Started GET "/authors/224/posts/2" for ::1 at 2016-06-14 17:11:09 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"author_id"=>"224", "id"=>"2"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 224]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=224):
+  app/controllers/posts_controller.rb:13:in `show'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (3.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (36.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (82.0ms)
+
+
+Started GET "/authors/1/posts/1/edit" for ::1 at 2016-06-14 17:11:20 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"1", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (1.2ms)
+  Rendered posts/edit.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 14ms (Views: 13.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/112/posts/1/edit" for ::1 at 2016-06-14 17:11:25 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"112", "id"=>"1"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (7.9ms)
+  Rendered posts/edit.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 21ms (Views: 20.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/112/posts/1/edit" for ::1 at 2016-06-14 17:15:09 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"112", "id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 112]]
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/authors" for ::1 at 2016-06-14 17:15:09 -0400
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors" for ::1 at 2016-06-14 17:19:12 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 253ms (Views: 237.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:19:13 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:19:13 -0400
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:19:13 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:19:13 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:19:13 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:19:13 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:19:13 -0400
+
+
+Started GET "/authors/1" for ::1 at 2016-06-14 17:19:14 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (52.0ms)
+Completed 200 OK in 89ms (Views: 74.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-06-14 17:19:15 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (22.8ms)
+  Rendered posts/new.html.erb within layouts/application (31.1ms)
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007fb917b24d78>:0x007fb917b55568>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <%= f.hidden_field :author_id %>
+    3:   <label>Post title:</label><br>
+    4:   <%= f.text_field :title %><br>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___3771005200982198568_70216472175200'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__2219440630257046990_70216474556420'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (53.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (61.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (137.3ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-06-14 17:19:16 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[35mAuthor Exists (0.3ms)[0m  SELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (15.2ms)
+  Rendered posts/new.html.erb within layouts/application (16.7ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x007fb917b24d78>:0x007fb917faab68>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <%= f.hidden_field :author_id %>
+    3:   <label>Post title:</label><br>
+    4:   <%= f.text_field :title %><br>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb___3771005200982198568_70216473977040'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__2219440630257046990_70216473988200'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (55.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (48.2ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (3.1ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.2ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-06-14 17:19:54 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (11.3ms)
+  Rendered posts/new.html.erb within layouts/application (12.3ms)
+Completed 200 OK in 39ms (Views: 27.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:19:54 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:19:54 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:19:54 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:19:54 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:19:54 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:19:54 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:19:54 -0400
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-06-14 17:21:23 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[35mAuthor Exists (0.1ms)[0m  SELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/_form.html.erb (6.4ms)
+  Rendered posts/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-06-14 17:21:23 -0400
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-06-14 17:21:23 -0400
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-06-14 17:21:23 -0400
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-06-14 17:21:23 -0400
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-06-14 17:21:23 -0400
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-06-14 17:21:23 -0400
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-06-14 17:21:23 -0400
+
+
+Started GET "/posts" for ::1 at 2016-06-14 17:21:36 -0400
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered posts/index.html.erb within layouts/application (5.0ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `name' for nil:NilClass):
+    2: <% @posts.each do |post| %>
+    3:   <div>
+    4:     <h2><%= post.title %></h2>
+    5:     <h3>by: <%= link_to post.author.name, author_posts_path(post.author) %></h3>
+    6:     <p><%= post.description %></p>
+    7:   </div>
+    8: <% end %>
+  app/views/posts/index.html.erb:5:in `block in _app_views_posts_index_html_erb___4169637193359778274_70216477123840'
+  app/views/posts/index.html.erb:2:in `_app_views_posts_index_html_erb___4169637193359778274_70216477123840'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (51.6ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (41.0ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (91.1ms)
+
+
+Started GET "/posts/2" for ::1 at 2016-06-14 17:21:39 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 15ms (Views: 14.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-06-14 17:21:42 -0400
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (3.8ms)
+  Rendered posts/new.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 20ms (Views: 19.1ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2016-06-14 17:21:58 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/P6lE3DNddoWTrq+QeEbdAEaCuy39uznMkOQ/mJhKerwgynTCDsVxZaHOzb/X839j7o+z830RH5jvQXDvNeTQA==", "post"=>{"author_id"=>"", "title"=>"Title", "description"=>""}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Title"], ["description", ""], ["created_at", "2016-06-14 21:21:58.745487"], ["updated_at", "2016-06-14 21:21:58.745487"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/6
+Completed 302 Found in 5ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/posts/6" for ::1 at 2016-06-14 17:21:58 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/show.html.erb within layouts/application (2.2ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"edit", :author_id=>nil, :controller=>"posts", :id=>"6"} missing required keys: [:author_id]):
+    1: <h1><%= @post.title %></h1>
+    2: <p>by <%= link_to @post.author.name, author_path(@post.author) if @post.author %> 
+    3: <%= link_to "Edit Post", edit_author_post_path(@post.author, @post) %></p>
+    4: <p><%= @post.description %> </p>
+  app/views/posts/show.html.erb:3:in `_app_views_posts_show_html_erb___4188955707430431262_70216471380340'
+
+
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.7ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/mattcassara/.rvm/gems/ruby-2.2.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.0ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-06-14 17:25:36 -0400
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (10.9ms)
+  Rendered posts/new.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 37ms (Views: 29.6ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/posts" for ::1 at 2016-06-14 17:25:46 -0400
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GudJUPHhu68XFte75hPZduMyFHs9Dt3VH2ehIIWhXHMWmsWQiRfbsJffVjNYrQ//bZIgWEcMdUxOmTQdWxfm2Q==", "post"=>{"author_id"=>"2", "title"=>"dsfsdgd", "description"=>"sfsgsfg"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Dsfsdgd"], ["description", "sfsgsfg"], ["author_id", 2], ["created_at", "2016-06-14 21:25:46.889591"], ["updated_at", "2016-06-14 21:25:46.889591"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/7
+Completed 302 Found in 6ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts/7" for ::1 at 2016-06-14 17:25:46 -0400
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 7]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/2/posts/7/edit" for ::1 at 2016-06-14 17:25:48 -0400
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"2", "id"=>"7"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1  [["author_id", 2], ["id", 7]]
+  Rendered posts/_form.html.erb (1.8ms)
+  Rendered posts/edit.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 20.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2/posts/new" for ::1 at 2016-06-14 17:25:52 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.erb (1.6ms)
+  Rendered posts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 18ms (Views: 15.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/2/posts/new" for ::1 at 2016-06-14 17:25:54 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.erb (1.7ms)
+  Rendered posts/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 24ms (Views: 22.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/2" for ::1 at 2016-06-14 17:25:59 -0400
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 2]]
+  Rendered authors/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 21ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/2/posts/new" for ::1 at 2016-06-14 17:26:01 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"2"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered posts/_form.html.erb (3.9ms)
+  Rendered posts/new.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 0.3ms)
