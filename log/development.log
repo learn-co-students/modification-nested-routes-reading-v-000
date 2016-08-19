@@ -3742,3 +3742,384 @@ Processing by PostsController#show as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for ::1 at 2016-08-19 14:45:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (8.8ms)
+Completed 200 OK in 566ms (Views: 552.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/1" for ::1 at 2016-08-19 14:46:12 -0500
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (40.9ms)
+Completed 200 OK in 70ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-08-19 14:46:17 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendered posts/_form.html.erb (18.6ms)
+  Rendered posts/new.html.erb within layouts/application (24.7ms)
+Completed 200 OK in 45ms (Views: 44.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-08-19 14:48:09 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendered posts/_form.html.erb (3.0ms)
+  Rendered posts/new.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 14:48:09 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 14:48:09 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 14:48:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 14:48:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 14:48:09 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 14:48:09 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 14:48:09 -0500
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-08-19 14:50:25 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  Rendered posts/_form.html.erb (1.8ms)
+  Rendered posts/new.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 45ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 14:50:26 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 14:50:26 -0500
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 14:50:26 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 14:50:26 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 14:50:26 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 14:50:26 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 14:50:26 -0500
+
+
+Started POST "/posts" for ::1 at 2016-08-19 14:50:41 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JTh4fJciqKvA+yAFsFZLLwbeJs1P0GGWq9QY1gY9XPnAZLZrQUFzE/hSOOVc8cx2TkHn92d3WJaHoamPF0NxgA==", "post"=>{"author_id"=>"1", "title"=>"new post", "description"=>"blah lol"}, "commit"=>"Create Post"}
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "New Post"], ["description", "blah lol"], ["author_id", 1], ["created_at", "2016-08-19 19:50:41.468755"], ["updated_at", "2016-08-19 19:50:41.468755"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/14
+Completed 302 Found in 6ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/posts/14" for ::1 at 2016-08-19 14:50:41 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 14]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 38ms (Views: 35.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/14/edit" for ::1 at 2016-08-19 14:51:31 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 14]]
+  Rendered posts/_form.html.erb (1.7ms)
+  Rendered posts/edit.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/14" for ::1 at 2016-08-19 14:55:48 -0500
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/show.html.erb within layouts/application (8.6ms)
+Completed 200 OK in 29ms (Views: 21.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 14:55:48 -0500
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 14:55:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 14:55:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 14:55:48 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 14:55:48 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 14:55:48 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 14:55:48 -0500
+
+
+Started GET "/authors/1/posts/14/edit" for ::1 at 2016-08-19 14:55:52 -0500
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"1", "id"=>"14"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 14]]
+  Rendered posts/_form.html.erb (2.4ms)
+  Rendered posts/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 30ms (Views: 28.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:31:36 -0500
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (18.1ms)
+  Rendered posts/new.html.erb within layouts/application (19.8ms)
+Completed 200 OK in 71ms (Views: 57.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:31:37 -0500
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 29ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:31:54 -0500
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (2.7ms)
+  Rendered posts/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 15:31:54 -0500
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 15:31:54 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 15:31:54 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 15:31:54 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 15:31:54 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 15:31:54 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 15:31:55 -0500
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:32:02 -0500
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (4.1ms)
+  Rendered posts/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 22ms (Views: 20.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 15:32:02 -0500
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 15:32:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 15:32:02 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 15:32:02 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 15:32:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 15:32:02 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 15:32:02 -0500
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:32:03 -0500
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (1.9ms)
+  Rendered posts/new.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 15:32:03 -0500
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 15:32:03 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 15:32:03 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 15:32:03 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 15:32:03 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 15:32:03 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 15:32:03 -0500
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:32:09 -0500
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (4.2ms)
+  Rendered posts/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 15:32:09 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 15:32:09 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 15:32:09 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 15:32:09 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 15:32:09 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 15:32:09 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 15:32:09 -0500
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:32:44 -0500
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (9.5ms)
+  Rendered posts/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 34ms (Views: 26.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 15:32:45 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 15:32:45 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 15:32:45 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 15:32:45 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 15:32:45 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 15:32:45 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 15:32:45 -0500
+
+
+Started GET "/posts/new" for ::1 at 2016-08-19 15:32:46 -0500
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (2.0ms)
+  Rendered posts/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2016-08-19 15:32:46 -0500
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-08-19 15:32:46 -0500
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2016-08-19 15:32:46 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2016-08-19 15:32:46 -0500
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-08-19 15:32:46 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-08-19 15:32:46 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2016-08-19 15:32:46 -0500
+
+
+Started GET "/authors" for ::1 at 2016-08-19 15:34:04 -0500
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 32ms (Views: 28.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/1" for ::1 at 2016-08-19 15:34:10 -0500
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 1]]
+  Rendered authors/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2016-08-19 15:34:23 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered posts/_form.html.erb (3.2ms)
+  Rendered posts/new.html.erb within layouts/application (4.9ms)
+Completed 200 OK in 35ms (Views: 23.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/15123/posts/new" for ::1 at 2016-08-19 15:34:36 -0500
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"15123"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 15123]]
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 1ms (ActiveRecord: 0.1ms)
+
+
+Started GET "/authors" for ::1 at 2016-08-19 15:34:36 -0500
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 16ms (Views: 15.1ms | ActiveRecord: 0.1ms)
