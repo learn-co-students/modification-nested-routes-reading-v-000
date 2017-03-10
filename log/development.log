@@ -3742,3 +3742,524 @@ Processing by PostsController#show as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (1.4ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (62.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (40.1ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (89.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (43.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (27.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (30.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 7]]
+  [1m[36m (48.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (60.5ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 9]]
+  [1m[36m (43.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (96.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36m (61.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (8.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 13]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (5.3ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 1]]
+  [1m[36m (28.2ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (69.1ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 3]]
+  [1m[36m (14.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2017-03-10 01:24:01.732353"], ["updated_at", "2017-03-10 01:24:01.732353"]]
+  [1m[35m (29.3ms)[0m  commit transaction
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2017-03-10 01:24:01.767912"], ["updated_at", "2017-03-10 01:24:01.767912"]]
+  [1m[36m (21.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2017-03-10 01:24:01.795577"], ["updated_at", "2017-03-10 01:24:01.795577"]]
+  [1m[35m (19.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["author_id", 4], ["created_at", "2017-03-10 01:24:01.831480"], ["updated_at", "2017-03-10 01:24:01.831480"]]
+  [1m[36m (23.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["author_id", 5], ["created_at", "2017-03-10 01:24:01.859742"], ["updated_at", "2017-03-10 01:24:01.859742"]]
+  [1m[35m (88.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["author_id", 6], ["created_at", "2017-03-10 01:24:01.953160"], ["updated_at", "2017-03-10 01:24:01.953160"]]
+  [1m[36m (40.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2017-03-09 00:00:00.000000"], ["updated_at", "2017-03-10 01:24:01.999896"], ["id", 16]]
+  [1m[35m (35.8ms)[0m  commit transaction
+
+
+Started GET "/authors" for 71.226.97.57 at 2017-03-10 01:35:06 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 2990ms (Views: 2876.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/authors.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 71.226.97.57 at 2017-03-10 01:35:11 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 71.226.97.57 at 2017-03-10 01:35:11 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 71.226.97.57 at 2017-03-10 01:35:11 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 71.226.97.57 at 2017-03-10 01:35:12 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 71.226.97.57 at 2017-03-10 01:35:12 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 71.226.97.57 at 2017-03-10 01:35:12 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 71.226.97.57 at 2017-03-10 01:35:12 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+
+
+Started GET "/authors/4" for 71.226.97.57 at 2017-03-10 01:35:22 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (85.2ms)
+Completed 200 OK in 123ms (Views: 101.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts" for 71.226.97.57 at 2017-03-10 01:35:32 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered posts/index.html.erb within layouts/application (13.6ms)
+Completed 200 OK in 110ms (Views: 106.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/authors" for 71.226.97.57 at 2017-03-10 01:37:00 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 112ms (Views: 35.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/4" for 71.226.97.57 at 2017-03-10 01:37:03 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 70ms (Views: 30.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/4/posts/new" for 71.226.97.57 at 2017-03-10 01:37:06 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (134.3ms)
+  Rendered posts/new.html.erb within layouts/application (141.4ms)
+Completed 200 OK in 182ms (Views: 178.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 71.226.97.57 at 2017-03-10 01:37:59 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Z37UdviPBQt2i+oYQrQ4jHzPWPfpuOgecrGy8TmlBj8LrOGPMWlWWa9iSIyTH+DXpMvlwkVnJLuGACBH9grrww==", "post"=>{"author_id"=>"4", "title"=>"Scary Stuff", "description"=>"I like to write about scary stuff."}, "commit"=>"Create Post"}
+Unpermitted parameter: author_id
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Scary Stuff"], ["description", "I like to write about scary stuff."], ["created_at", "2017-03-10 01:37:59.564449"], ["updated_at", "2017-03-10 01:37:59.564449"]]
+  [1m[35m (112.2ms)[0m  commit transaction
+Redirected to http://159.203.88.6:30011/posts/17
+Completed 302 Found in 122ms (ActiveRecord: 113.0ms)
+
+
+Started GET "/posts/17" for 71.226.97.57 at 2017-03-10 01:37:59 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  Rendered posts/show.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.3ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" DESC LIMIT 1[0m
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts"  ORDER BY "posts"."id" DESC LIMIT 1
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 17]]
+  [1m[36m (27.3ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/authors/4" for 71.226.97.57 at 2017-03-10 01:47:47 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (108.5ms)
+Completed 200 OK in 1037ms (Views: 910.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/authors/4/posts/new" for 71.226.97.57 at 2017-03-10 01:47:51 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (101.1ms)
+  Rendered posts/new.html.erb within layouts/application (114.4ms)
+Completed 200 OK in 207ms (Views: 204.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 71.226.97.57 at 2017-03-10 01:48:16 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6peTDngkcCrMA1VqUcbyuKttX9EV+JS/2Zjgdkcl6o6GRab3scIjeBXq9/6AbSrjc2ni5LknWBotKXLAiIoHcg==", "post"=>{"author_id"=>"4", "title"=>"It the Clown", "description"=>"It becomes your worst nightmare. "}, "commit"=>"Create Post"}
+Unpermitted parameter: author_id
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "posts" ("title", "description", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "It The Clown"], ["description", "It becomes your worst nightmare. "], ["created_at", "2017-03-10 01:48:16.389817"], ["updated_at", "2017-03-10 01:48:16.389817"]]
+  [1m[35m (17.2ms)[0m  commit transaction
+Redirected to http://159.203.88.6:30011/posts/18
+Completed 302 Found in 41ms (ActiveRecord: 18.4ms)
+
+
+Started GET "/posts/18" for 71.226.97.57 at 2017-03-10 01:48:16 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered posts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 110ms (Views: 105.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/posts/18/edit" for 71.226.97.57 at 2017-03-10 01:48:39 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.3ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered posts/_form.html.erb (3.9ms)
+  Rendered posts/edit.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 168ms (Views: 97.7ms | ActiveRecord: 1.3ms)
+
+
+Started PATCH "/posts/18" for 71.226.97.57 at 2017-03-10 01:48:42 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"dSAXtrXy+4Pu4rSA7HwmLWO+7AGunB1AtoTfXR1VuzEZ8iJPfBSo0TcLFhQ91/52u7pRNAJD0eVCNU3r0vpWzQ==", "post"=>{"author_id"=>"", "title"=>"It The Clown", "description"=>"It becomes your worst nightmare. "}, "commit"=>"Update Post", "id"=>"18"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35m (1.4ms)[0m  begin transaction
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://159.203.88.6:30011/posts/18
+Completed 302 Found in 10ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/posts/18" for 71.226.97.57 at 2017-03-10 01:48:42 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  Rendered posts/show.html.erb within layouts/application (67.6ms)
+Completed 200 OK in 105ms (Views: 102.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/18" for 71.226.97.57 at 2017-03-10 01:48:51 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[36mPost Load (1.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  Rendered posts/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 127ms (Views: 118.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/authors/4" for 71.226.97.57 at 2017-03-10 01:48:54 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.7ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 95ms (Views: 84.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/authors" for 71.226.97.57 at 2017-03-10 01:48:57 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.4ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 95ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/4" for 71.226.97.57 at 2017-03-10 01:48:59 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 22ms (Views: 20.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/4/posts/new" for 71.226.97.57 at 2017-03-10 01:49:01 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (17.6ms)
+  Rendered posts/new.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 99ms (Views: 96.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 71.226.97.57 at 2017-03-10 01:49:35 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohUUcLTN+2BOH9MpZ553sfzxePJYgz1hI6eJqPexvw3OxyGJfSuoMpf2cb22Na/qJPXFx/Rc8cTXFhseOB5S8Q==", "post"=>{"author_id"=>"4", "title"=>"Test Post", "description"=>"Trying to use the hidden author field. "}, "commit"=>"Create Post"}
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Test Post"], ["description", "Trying to use the hidden author field. "], ["author_id", 4], ["created_at", "2017-03-10 01:49:35.768695"], ["updated_at", "2017-03-10 01:49:35.768695"]]
+  [1m[36m (6.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://159.203.88.6:30011/posts/19
+Completed 302 Found in 81ms (ActiveRecord: 10.0ms)
+
+
+Started GET "/posts/19" for 71.226.97.57 at 2017-03-10 01:49:35 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (16.2ms)
+Completed 200 OK in 103ms (Views: 96.1ms | ActiveRecord: 1.1ms)
+  [1m[36mPost Load (0.5ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mPost Load (0.4ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 18]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 18]]
+  [1m[35m (19.2ms)[0m  commit transaction
+
+
+Started GET "/posts/19" for 71.226.97.57 at 2017-03-10 01:54:46 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[35mPost Load (0.9ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (100.3ms)
+Completed 200 OK in 1028ms (Views: 908.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/authors/4/posts/19/edit" for 71.226.97.57 at 2017-03-10 01:54:51 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"4", "id"=>"19"}
+  [1m[35mPost Load (0.2ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 19]]
+  Rendered posts/_form.html.erb (89.1ms)
+  Rendered posts/edit.html.erb within layouts/application (98.1ms)
+Completed 200 OK in 135ms (Views: 132.3ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/posts/19" for 71.226.97.57 at 2017-03-10 01:54:57 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"9t5CXE080tJcx8LN31v7EdMf+tp/8Ov6wL+lL+YZkxqaDHelhNqBgIUuYFkO8CNKCxtH79MvJ180DjeZKbZ+5g==", "post"=>{"author_id"=>"4", "title"=>"Test Post", "description"=>"Trying to use the hidden author field. Now testing the edit!"}, "commit"=>"Update Post", "id"=>"19"}
+  [1m[36mPost Load (1.2ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mUPDATE "posts" SET "description" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["description", "Trying to use the hidden author field. Now testing the edit!"], ["updated_at", "2017-03-10 01:54:57.758122"], ["id", 19]]
+  [1m[35m (85.0ms)[0m  commit transaction
+Redirected to http://159.203.88.6:30011/posts/19
+Completed 302 Found in 160ms (ActiveRecord: 88.1ms)
+
+
+Started GET "/posts/19" for 71.226.97.57 at 2017-03-10 01:54:58 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"19"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 19]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 67ms (Views: 64.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts" for 71.226.97.57 at 2017-03-10 02:16:19 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.4ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (189.2ms)
+Completed 200 OK in 1312ms (Views: 1282.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/posts/new" for 71.226.97.57 at 2017-03-10 02:16:28 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (192.0ms)
+  Rendered posts/new.html.erb within layouts/application (210.0ms)
+Completed 200 OK in 318ms (Views: 312.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/5/posts" for 71.226.97.57 at 2017-03-10 02:16:38 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered posts/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 202ms (Views: 108.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/5/posts" for 71.226.97.57 at 2017-03-10 02:16:43 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 129ms (Views: 114.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/5/posts" for 71.226.97.57 at 2017-03-10 02:16:51 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered posts/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 111ms (Views: 102.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/5/posts" for 71.226.97.57 at 2017-03-10 02:18:18 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (1.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered posts/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 100ms (Views: 91.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/authors/5/posts" for 71.226.97.57 at 2017-03-10 02:18:23 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.2ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered posts/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 91ms (Views: 85.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/5/" for 71.226.97.57 at 2017-03-10 02:18:37 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mAuthor Load (0.9ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 5]]
+  Rendered authors/show.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 142ms (Views: 133.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/authors/5/posts/new" for 71.226.97.57 at 2017-03-10 02:18:40 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"5"}
+  [1m[35mAuthor Exists (0.3ms)[0m  SELECT  1 AS one FROM "authors" LIMIT 1
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered posts/_form.html.erb (7.8ms)
+  Rendered posts/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 215ms (Views: 179.5ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/posts" for 71.226.97.57 at 2017-03-10 02:18:48 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HknsBpG7AwdjAByx8aqBTkjPAZqgANgqQ/bdY7cQVVFym9n/WF1QVbrpviUgAVkVkMu8rwzfFI+3R0/VeL+4rQ==", "post"=>{"title"=>"Blah Blah", "author_id"=>"5", "description"=>"Stuff Stuff"}, "commit"=>"Create Post"}
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (1.8ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Blah Blah"], ["description", "Stuff Stuff"], ["author_id", 5], ["created_at", "2017-03-10 02:18:48.977286"], ["updated_at", "2017-03-10 02:18:48.977286"]]
+  [1m[35m (54.3ms)[0m  commit transaction
+Redirected to http://159.203.88.6:30011/posts/20
+Completed 302 Found in 74ms (ActiveRecord: 56.3ms)
+
+
+Started GET "/posts/20" for 71.226.97.57 at 2017-03-10 02:18:49 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"20"}
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 20]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 97ms (Views: 94.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/5" for 71.226.97.57 at 2017-03-10 02:18:52 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAuthor Load (0.9ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 5]]
+  Rendered authors/show.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 128ms (Views: 120.5ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/authors/5/" for 71.226.97.57 at 2017-03-10 02:19:02 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 5]]
+  Rendered authors/show.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 113ms (Views: 110.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts" for 71.226.97.57 at 2017-03-10 02:19:14 +0000
+Cannot render console from 71.226.97.57! Allowed networks: 127.0.0.1, ::1, 127.0.0.0/127.255.255.255
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered posts/index.html.erb within layouts/application (15.8ms)
+Completed 200 OK in 112ms (Views: 109.0ms | ActiveRecord: 1.0ms)
