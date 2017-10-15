@@ -1,3 +1,7 @@
+
+<% if flash[:alert] %>
+  <p class="warning"><%= flash[:alert] %></p>
+<% end %>
 <h1>Authors</h1>
 <ul>
   <% @authors.each do |author| %>
