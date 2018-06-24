@@ -4,3 +4,5 @@
 <% @author.posts.each do |post| %>
   <div><%= post.title %></div>
 <% end %>
+
+<h3><%= link_to "New Post", new_author_post_path(@author)%></h3>
