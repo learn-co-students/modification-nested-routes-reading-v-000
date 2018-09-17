@@ -5,7 +5,9 @@
 <p>Posts:</p>
 <% @author.posts.each do |post| %>
   <div><%= post.title %></div>
+  <%= link_to "Edit Post", edit_author_post_path(post.author, post) if post.author %>
 <% end %>
+
 
 
 
