@@ -1,11 +1,19 @@
 <%= form_for(@post) do |f| %>
-  <label>Post title:</label><br>
-  <%= f.hidden_field :author_id %>
-
-  <%= f.text_field :title %><br>
+  <%= author_id_field(@post)%>  
+  <br>
+  This give us options to select from.
+ <br>
+ <br>
   
+   <label>Post title:</label><br>
+    <%= f.text_field :title %><br>
+
   <label>Post Description</label><br>
   <%= f.text_area :description %><br>
 
   <%= f.submit %>
 <% end %>
+
+<br>
+
+# We add a hidden_field for the :author_id
