@@ -1,4 +1,8 @@
+<%# why not make a nested resource route for :create in addition to :new?
+  because the form_for(@post) helper here will automatically route to POST posts_controller#create for a new Post. by carrying the author_id and allowing it through strong parameters, the existing create route and action can be used without needing to do anything else. %>
 <%= form_for(@post) do |f| %>
+  <%= author_id_field(@post) %><br>
+  
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
 
