@@ -2,6 +2,10 @@
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
 
+<!-- author_id setup in new action of PostsController
+     gets submitted back to server here -->
+  <%= f.hidden_field :author_id %>
+
   <label>Post Description</label><br>
   <%= f.text_area :description %><br>
 
