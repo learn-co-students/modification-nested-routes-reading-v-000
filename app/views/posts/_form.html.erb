@@ -1,4 +1,7 @@
 <%= form_for(@post) do |f| %>
+  <label>Select Author:</label>
+  <%= author_id_field(@post) %><br><br>
+
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
 
