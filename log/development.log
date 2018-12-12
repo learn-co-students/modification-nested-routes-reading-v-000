@@ -3742,3 +3742,728 @@ Processing by PostsController#show as HTML
   [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 2]]
   Rendered posts/show.html.erb within layouts/application (0.7ms)
 Completed 200 OK in 12ms (Views: 10.8ms | ActiveRecord: 0.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 1]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 3]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 5]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 6]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 7]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 8]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 9]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 10]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 11]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "posts" WHERE "posts"."id" = ?[0m  [["id", 12]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "posts" WHERE "posts"."id" = ?  [["id", 13]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 1]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mDELETE FROM "authors" WHERE "authors"."id" = ?[0m  [["id", 2]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "authors" WHERE "authors"."id" = ?  [["id", 3]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Stephen King"], ["genre", "Romance"], ["bio", "Writes a lot of scary things."], ["created_at", "2018-12-08 22:23:16.723646"], ["updated_at", "2018-12-08 22:23:16.723646"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["name", "Ariana Huffington"], ["genre", "Comedy"], ["bio", "Up and comer. One to watch."], ["created_at", "2018-12-08 22:23:16.726392"], ["updated_at", "2018-12-08 22:23:16.726392"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "authors" ("name", "genre", "bio", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "Horse Ebooks"], ["genre", "?????"], ["bio", "Eclectic."], ["created_at", "2018-12-08 22:23:16.727984"], ["updated_at", "2018-12-08 22:23:16.727984"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Something About Democrats"], ["description", "  Last night I dreamt there is more to life than to bully friends.\n  What has that got to do with Democrats, you probably wonder...\n  The answer is here. Right here. Back in school my hair was silly.\n  Nevermind about the details, but... In a nut-shell: And still,\n  it was strange. Using Google, I found a 12-sided dice.\n  Which would be nothing special but...\n"], ["author_id", 4], ["created_at", "2018-12-08 22:23:16.734258"], ["updated_at", "2018-12-08 22:23:16.734258"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Spam Spam Spam"], ["description", "  It occurred to me that no matter what cards you are dealt,\n  you need to enjoy the small joys. How is this related to Spam, you ask.\n  Fair enough. OK, I will tell you something here now...\n  Sometime around last year I loved movies. Yeah, just what it sounds like.\n  In a nut-shell: And still, it was strange. I collided with the powers of a my computer,\n  broken and gray. And here's why this matters...\n"], ["author_id", 5], ["created_at", "2018-12-08 22:23:16.736303"], ["updated_at", "2018-12-08 22:23:16.736303"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Links! Click Links!"], ["description", "  Last night I dreamt we simply need to realize to be so competitive.\n  Does the responsibility lie with Links, you probably wonder...\n  The answer is here. Right here. About the time I broke up with my\n  ex I was totally into music. Whatever. So that's that.\n  But something wasn't right. I stumbled upon a giant banana.\n"], ["author_id", 6], ["created_at", "2018-12-08 22:23:16.738176"], ["updated_at", "2018-12-08 22:23:16.738176"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "posts" SET "created_at" = ?, "updated_at" = ? WHERE "posts"."id" = ?[0m  [["created_at", "2018-12-07 00:00:00.000000"], ["updated_at", "2018-12-08 22:23:16.739964"], ["id", 16]]
+  [1m[35m (0.6ms)[0m  commit transaction
+
+
+Started GET "/authors/" for ::1 at 2018-12-08 14:48:51 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 773ms (Views: 764.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/" for ::1 at 2018-12-08 14:50:22 -0800
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/" for ::1 at 2018-12-08 14:50:57 -0800
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 12ms (Views: 11.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/4" for ::1 at 2018-12-08 14:50:59 -0800
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (20.4ms)
+Completed 200 OK in 36ms (Views: 29.6ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 14:55:42 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (23.5ms)
+  Rendered posts/new.html.erb within layouts/application (27.4ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbec70ced8>:0x00007fcbec7167a8>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:   <%= f.text_field :title %><br>
+    4: 
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256911016300'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (42.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (92.0ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:01:35 -0800
+
+SyntaxError (/Users/Mothership1/Documents/my-git-project/modification-nested-routes-reading-v-000/app/controllers/posts_controller.rb:42: syntax error, unexpected tSYMBEG, expecting '('
+....permit(:title, :description. :author_id)
+...                              ^):
+  app/controllers/posts_controller.rb:42: syntax error, unexpected tSYMBEG, expecting '('
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (41.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.5ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:01:46 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (20.5ms)
+  Rendered posts/new.html.erb within layouts/application (21.5ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbecac7870>:0x00007fcbeda3e268>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:   
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256920633120'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.9ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (39.9ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.4ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:03:43 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (15.5ms)
+  Rendered posts/new.html.erb within layouts/application (16.4ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbecac7870>:0x00007fcbec5d82d8>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:   
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256920633120'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.0ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:05:08 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (18.9ms)
+  Rendered posts/new.html.erb within layouts/application (19.8ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbecac7870>:0x00007fcbf416aa68>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256975090100'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.0ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (76.1ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:07:27 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (19.5ms)
+  Rendered posts/new.html.erb within layouts/application (20.6ms)
+Completed 500 Internal Server Error in 29ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbf33f6d78>:0x00007fcbf33efb68>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256975090100'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (45.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (36.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (85.3ms)
+
+
+Started GET "/authors" for ::1 at 2018-12-08 15:10:39 -0800
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/6" for ::1 at 2018-12-08 15:10:42 -0800
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 6]]
+  Rendered authors/show.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/6/posts/new" for ::1 at 2018-12-08 15:10:43 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"6"}
+  Rendered posts/_form.html.erb (17.5ms)
+  Rendered posts/new.html.erb within layouts/application (18.6ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbf33f6d78>:0x00007fcbf2e8a420>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256975090100'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (43.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.7ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (73.3ms)
+
+
+Started GET "/authors/6/posts/new" for ::1 at 2018-12-08 15:16:57 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"6"}
+  Rendered posts/_form.html.erb (16.9ms)
+  Rendered posts/new.html.erb within layouts/application (17.8ms)
+Completed 500 Internal Server Error in 31ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbf2b3da10>:0x00007fcbedd12818>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256967192360'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (48.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (78.2ms)
+
+
+Started GET "/authors/6/posts/new" for ::1 at 2018-12-08 15:17:13 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"6"}
+  Rendered posts/_form.html.erb (20.9ms)
+  Rendered posts/new.html.erb within layouts/application (21.9ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.4ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbf3262ea8>:0x00007fcbf325fd20>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256967192360'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (42.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.7ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (81.6ms)
+
+
+Started GET "/authors" for ::1 at 2018-12-08 15:23:52 -0800
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.3ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 23ms (Views: 19.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/4" for ::1 at 2018-12-08 15:23:54 -0800
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 20ms (Views: 18.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:24:54 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (14.6ms)
+  Rendered posts/new.html.erb within layouts/application (15.6ms)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.5ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbee022698>:0x00007fcbec6ec160>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256910856500'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.9ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (47.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.9ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (84.9ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2018-12-08 15:25:03 -0800
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 19ms (Views: 12.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/4/posts" for ::1 at 2018-12-08 15:25:19 -0800
+Processing by PostsController#index as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered posts/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 12ms (Views: 11.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:25:26 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (17.6ms)
+  Rendered posts/new.html.erb within layouts/application (18.8ms)
+Completed 500 Internal Server Error in 22ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbee022698>:0x00007fcbec7cb6a8>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256910856500'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (44.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (34.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (75.6ms)
+
+
+Started GET "/authors" for ::1 at 2018-12-08 15:27:19 -0800
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 13ms (Views: 12.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/4" for ::1 at 2018-12-08 15:27:21 -0800
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:27:26 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  Rendered posts/_form.html.erb (15.8ms)
+  Rendered posts/new.html.erb within layouts/application (16.8ms)
+Completed 500 Internal Server Error in 21ms (ActiveRecord: 0.0ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbee022698>:0x00007fcbf40e1538>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <label>Post title:</label><br>
+    3:  
+    4:   <%= f.hidden_field :author_id %>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256910856500'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (4.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (41.7ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (35.8ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (79.1ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:31:09 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Exists (0.1ms)[0m  SELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/_form.html.erb (17.8ms)
+  Rendered posts/new.html.erb within layouts/application (18.9ms)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.6ms)
+
+ActionView::Template::Error (undefined method `posts_path' for #<#<Class:0x00007fcbf29f2890>:0x00007fcbf29ef370>):
+    1: <%= form_for(@post) do |f| %>
+    2:   <%= author_id_field(@post) %>
+    3:   <br>
+    4:   <label>Post title:</label><br>
+  app/views/posts/_form.html.erb:1:in `_app_views_posts__form_html_erb__3188408709586782574_70256962718840'
+  app/views/posts/new.html.erb:1:in `_app_views_posts_new_html_erb__3076777973505363932_70256910969420'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.7ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (49.5ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.1ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (72.3ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-08 15:33:02 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/_form.html.erb (17.5ms)
+  Rendered posts/new.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 38ms (Views: 30.3ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/posts" for ::1 at 2018-12-08 15:45:25 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gemoq35LK4oAYaSK8/1y5SAqrX35iS6SqYYMUKcyOjIOqX7JRfDIDh03K9+qV7luwe+7VLM8CZ/W4pQ/XJApkQ==", "post"=>{"author_id"=>"4", "title"=>"Boop ", "description"=>"bleep"}, "commit"=>"Create Post"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.2ms)[0m  [1mINSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Boop "], ["description", "bleep"], ["author_id", 4], ["created_at", "2018-12-08 23:45:25.254079"], ["updated_at", "2018-12-08 23:45:25.254079"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/posts/17
+Completed 302 Found in 20ms (ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/17" for ::1 at 2018-12-08 15:45:25 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35mAuthor Load (0.5ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 217ms (Views: 210.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/authors/4/posts/17/edit" for ::1 at 2018-12-08 15:45:55 -0800
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"4", "id"=>"17"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."author_id" = ? AND "posts"."id" = ? LIMIT 1  [["author_id", 4], ["id", 17]]
+  Rendered posts/_form.html.erb (12.5ms)
+  Rendered posts/edit.html.erb within layouts/application (16.5ms)
+Completed 200 OK in 36ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/posts/17" for ::1 at 2018-12-08 15:46:00 -0800
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oxzXtOnr04E7jpoHFSOFy8PQMj8GScTCbHdIXCHgTuAsXAHW0lAwBSbYFVJMiU5AIhUkFkz8488TE9Az2kJdQw==", "post"=>{"author_id"=>"4", "title"=>"Boop ", "description"=>"bleep"}, "commit"=>"Update Post", "id"=>"17"}
+  [1m[36mPost Load (0.1ms)[0m  [1mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1[0m  [["id", 17]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/17
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/17" for ::1 at 2018-12-08 15:46:00 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mAuthor Load (0.3ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors" for ::1 at 2018-12-12 11:07:36 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by AuthorsController#index as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered authors/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 223ms (Views: 214.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/authors/4" for ::1 at 2018-12-12 11:07:50 -0800
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mPost Load (0.1ms)[0m  SELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (21.1ms)
+Completed 200 OK in 38ms (Views: 31.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-12 11:07:53 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/_form.html.erb (18.3ms)
+  Rendered posts/new.html.erb within layouts/application (22.6ms)
+Completed 200 OK in 40ms (Views: 33.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-12 11:08:14 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/_form.html.erb (1.3ms)
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2018-12-12 11:08:31 -0800
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[36mAuthor Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/_form.html.erb (1.4ms)
+  Rendered posts/new.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.1ms)
+
+
+Started POST "/posts" for ::1 at 2018-12-12 11:12:09 -0800
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"0Xhn3SrJK+Z2o8QbQh5iuLct7UTJLEE0M04kQlsDUz5eOLG/EXLIYmv1S04btKkzVuj7bYOZZjlMKrwtoKFAnQ==", "post"=>{"author_id"=>"4", "title"=>"Boop ", "description"=>"bleep"}, "commit"=>"Create Post"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "posts" ("title", "description", "author_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["title", "Boop "], ["description", "bleep"], ["author_id", 4], ["created_at", "2018-12-12 19:12:09.762977"], ["updated_at", "2018-12-12 19:12:09.762977"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/posts/18
+Completed 302 Found in 3ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/18" for ::1 at 2018-12-12 11:12:09 -0800
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"18"}
+  [1m[35mPost Load (0.1ms)[0m  SELECT  "posts".* FROM "posts" WHERE "posts"."id" = ? LIMIT 1  [["id", 18]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/show.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-12-12 11:13:08 -0800
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (4.1ms)
+  Rendered posts/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 18ms (Views: 17.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/new" for ::1 at 2018-12-12 11:13:36 -0800
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"new"}
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 0]]
+Completed 404 Not Found in 1ms (ActiveRecord: 0.1ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=new):
+  app/controllers/authors_controller.rb:4:in `show'
+
+
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_source.erb (2.7ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/actionpack-4.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (47.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (38.6ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Mothership1/.rvm/gems/ruby-2.5.1/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (86.9ms)
+
+
+Started GET "/authors" for ::1 at 2018-12-12 11:13:50 -0800
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 10ms (Views: 9.8ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/posts/new" for ::1 at 2018-12-12 11:27:23 -0800
+Processing by PostsController#new as HTML
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT "authors".* FROM "authors"
+  Rendered posts/_form.html.erb (1.5ms)
+  Rendered posts/new.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.1ms)
