@@ -1,3 +1,161 @@
+#Summary of steps
+What are we doing? (2 Things)
+First.)Creating a way to create a new post that is automatically linked to an author.
+Second.) Beign able to edit this post that is linked to an author.
+
+#Adding New Post Linked to Author
+1. Mofidy resources in config/routes.rb so that the nested resource is included.  In this case we are adding :new
+
+original:
+    resources :authors, only: [:show, :index] do
+      resources :posts, only: [:show, :index]
+    end
+
+altered:
+    resources :authors, only: [:show, :index] do
+      resources :posts, only: [:show, :index, :new]
+    end
+
+Result:  Now have access to /authors/:id/posts/new, and a new_author_post_path helper.
+
+2.) Update Posts controller
+
+original:
+    def new
+      @post = Post.new
+    end
+altered:
+  def new
+    if params[:author_id] && !Author.exists?(params[:author_id])
+      redirect_to authors_path, alert: "Author not found."
+    else
+      @post = Post.new(author_id: params[:author_id])
+    end
+  end
+
+result:  EAch time that a new post is created we check the author_id param and make sure that it is valid
+
+
+3.) Update Author/show view
+
+original:authors/show.html.erb
+
+    <h1><%= @author.name %></h1>
+
+    <p>Posts:</p>
+    <% @author.posts.each do |post| %>
+      <div><%= post.title %></div>
+    <% end %>
+
+altered:
+
+<!-- authors/show.html.erb -->
+
+    <h1><%= @author.name %></h1>
+
+    <%= link_to "New Post", new_author_post_path(@author) %>
+
+    <p>Posts:</p>
+    <% @author.posts.each do |post| %>
+      <div><%= post.title %></div>
+    <% end %>
+result: added link that allows for navigation to author/posts/new for that author.
+
+4.) Update posts/_form.html.erb so that the author is included as well as cover the use case that a user creates a post via the regular /posts/new path and is therefore able to select and author.  
+
+This can be furhter simplified by pushing the author_id field validation in posts_helper.rb
+
+original:
+    <%= form_for(@post) do |f| %>
+      <label>Post title:</label><br>
+      <%= f.text_field :title %><br>
+
+      <label>Post Description</label><br>
+      <%= f.text_area :description %><br>
+
+      <%= f.submit %>
+    <% end %>
+
+altered:
+    # helpers/posts_helper.rb
+
+    module PostsHelper
+      def author_id_field(post)
+        if post.author.nil?
+          select_tag "post[author_id]", options_from_collection_for_select(Author.all, :id, :name)
+        else
+          hidden_field_tag "post[author_id]", post.author_id
+        end
+      end
+    end
+    <!-- posts/_form.html.erb -->
+
+    <%= form_for(@post) do |f| %>
+    <label>Post title:</label><br>
+
+
+result:  the author_id is validated and consolidated within a posts_helper method.
+
+5. Update posts_controller strong params to accept author_id
+
+  original:
+    private
+
+    def post_params
+      params.require(:post).permit(:title, :description)
+    end
+  altered:
+
+    def post_params
+      params.require(:post).permit(:title, :description, :author_id)
+    end
+result :author_id has been added after :description
+
+#Adding Edit Functionality to Post Linked to Author
+1.) add :edit to nested resource, same as new
+1a.) The _form view does not need to be updated as both new and edit use the same view.
+
+2.) Update Posts/show view
+
+original:
+    <h1><%= @post.title %></h1>
+    <p>by <%= link_to @post.author.name, author_path(@post.author) if @post.author %> (<%= link_to "Edit Post", edit_post_path(@post) %>)</p>
+    <p><%= @post.description %> </p>
+
+
+altered:
+    <!-- posts/show.html.erb -->
+
+    <h1><%= @post.title %></h1>
+    <p>by <%= link_to @post.author.name, author_path(@post.author) if @post.author %> (<%= link_to "Edit Post", edit_author_post_path(@post.author, @post) if @post.author %>)</p>
+    <p><%= @post.description %> </p>
+
+result:
+  helper method has been changed from edit_post_path(@post) to edit_author_post_path(@post.author, @post) with corresponding if logic to select the right link
+
+3.)  Update Posts Controller so that author_id is validated.  Otherwise regardless of the author_id the same post will display.
+
+original:
+    def edit
+      @post = Post.find(params[:id])
+    end
+altered:
+    def edit
+      if params[:author_id]
+        author = Author.find_by(id: params[:author_id])
+        if author.nil?
+          redirect_to authors_path, alert: "Author not found."
+        else
+          @post = author.posts.find_by(id: params[:id])
+          redirect_to author_posts_path(author), alert: "Post not found." if @post.nil?
+        end
+      else
+        @post = Post.find(params[:id])
+      end
+    end
+result: author is validated and if it does not match an existing author then the user will be redirected to the authors_path.
+
+
 # Modifying Nested Resources
 
 ## Objectives
@@ -100,7 +258,7 @@ Now we know the `author_id` will be allowed for mass-assignment in the `create` 
 
 Let's try it out. Go to an author's new post page, and make a post. We should see the author's name in the byline now!
 
-Why didn't we have to make a nested resource route for `:create` in addition to `:new`? 
+Why didn't we have to make a nested resource route for `:create` in addition to `:new`?
 
 The `form_for(@post)` helper in `posts/_form.html.erb` will automatically route to `POST posts_controller#create` for a new `Post`. By carrying the `author_id` as we did and allowing it through strong parameters, the existing `create` route and action can be used without needing to do anything else.
 
