@@ -1,7 +1,7 @@
   [1m[36m (1.8ms)[0m  [1mDROP TABLE "authors"[0m
-  [1m[35m (0.7ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[35m (0.7ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)
   [1m[36m (0.9ms)[0m  [1mDROP TABLE "posts"[0m
-  [1m[35m (1.1ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[35m (1.1ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer)
   [1m[36m (0.3ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (1.8ms)[0m  DROP TABLE "authors"
   [1m[36m (1.0ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
@@ -1239,9 +1239,9 @@ Started GET "/assets/authors.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde
 
 Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for ::1 at 2016-01-27 15:26:19 -0500
   [1m[36m (2.1ms)[0m  [1mDROP TABLE "authors"[0m
-  [1m[35m (0.7ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[35m (0.7ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)
   [1m[36m (0.9ms)[0m  [1mDROP TABLE "posts"[0m
-  [1m[35m (0.7ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[35m (0.7ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer)
   [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (1.5ms)[0m  DROP TABLE "authors"
   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
@@ -1673,7 +1673,7 @@ Processing by AuthorsController#post as HTML
   Rendered posts/show.html.erb within layouts/application (0.1ms)
 Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.1ms)
   [1m[36m (0.9ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
-  [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[35m (0.8ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer)
   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
   [1m[36m (0.6ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
@@ -1683,7 +1683,7 @@ Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.1ms)
   [1m[36m (0.6ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20160113011041')[0m
   [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160113011150')
   [1m[36m (0.8ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
-  [1m[35m (0.6ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[35m (0.6ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer)
   [1m[36m (0.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
   [1m[35m (0.1ms)[0m  select sqlite_version(*)
   [1m[36m (0.8ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
@@ -2035,9 +2035,9 @@ ActionController::RoutingError (No route matches [GET] "/authors/1/posts"):
   Rendered /Users/scottcreynolds/.rvm/gems/ruby-2.1.2/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.3ms)
   [1m[36mAuthor Load (2.2ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" IS NULL LIMIT 1[0m
   [1m[36m (1.2ms)[0m  [1mDROP TABLE "authors"[0m
-  [1m[35m (0.6ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[35m (0.6ms)[0m  CREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)
   [1m[36m (1.1ms)[0m  [1mDROP TABLE "posts"[0m
-  [1m[35m (0.7ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer) 
+  [1m[35m (0.7ms)[0m  CREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "post_status" boolean, "author_id" integer)
   [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (1.2ms)[0m  DROP TABLE "authors"
   [1m[36m (0.6ms)[0m  [1mCREATE TABLE "authors" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "genre" varchar, "bio" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
@@ -3865,9 +3865,9 @@ Completed 500 Internal Server Error in 57ms (ActiveRecord: 0.2ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb86f40660>:0x007fcb82d5d888>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256025068200'
@@ -3897,9 +3897,9 @@ Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.2ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb86f40660>:0x007fcb837a2730>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256030323380'
@@ -3929,9 +3929,9 @@ Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.1ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb86f40660>:0x007fcb8990d628>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256030323380'
@@ -3961,9 +3961,9 @@ Completed 500 Internal Server Error in 39ms (ActiveRecord: 0.1ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb86f40660>:0x007fcb8a260360>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256025068200'
@@ -3993,9 +3993,9 @@ Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.1ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb86f40660>:0x007fcb8b07eca8>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256025068200'
@@ -4025,9 +4025,9 @@ Completed 500 Internal Server Error in 46ms (ActiveRecord: 0.2ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb86f40660>:0x007fcb8b853b40>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256030323380'
@@ -4057,9 +4057,9 @@ Completed 500 Internal Server Error in 82ms (ActiveRecord: 1.0ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb89dfaaf0>:0x007fcb8a2cab70>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256025068200'
@@ -4089,9 +4089,9 @@ Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.2ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb89dfaaf0>:0x007fcb82c57ce0>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256030323380'
@@ -4128,9 +4128,9 @@ Completed 500 Internal Server Error in 48ms (ActiveRecord: 0.2ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb8a349970>:0x007fcb8a4110d8>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256087326520'
@@ -4160,9 +4160,9 @@ Completed 500 Internal Server Error in 51ms (ActiveRecord: 0.5ms)
 ActionView::Template::Error (undefined method `new_author_post_path' for #<#<Class:0x007fcb8a349970>:0x007fcb89e489a8>
 Did you mean?  new_post_path):
     1: <h1><%= @author.name %></h1>
-    2: 
+    2:
     3: <%= link_to "New Post", new_author_post_path(@author) %>
-    4: 
+    4:
     5: <p>Posts:</p>
     6: <% @author.posts.each do |post| %>
   app/views/authors/show.html.erb:3:in `_app_views_authors_show_html_erb__872872481921692134_70256084327340'
