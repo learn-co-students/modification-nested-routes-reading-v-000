@@ -4148,3 +4148,57 @@ ActiveRecord::RecordNotFound (Couldn't find Author with 'id'=1):
   Rendered /Users/katejewett-williams/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
   Rendered /Users/katejewett-williams/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
   Rendered /Users/katejewett-williams/.rvm/gems/ruby-2.3.3/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (185.4ms)
+
+
+Started GET "/" for ::1 at 2019-02-27 09:01:22 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.6ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mAuthor Load (0.6ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mAuthor Load (0.1ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered posts/index.html.erb within layouts/application (55.6ms)
+Completed 200 OK in 397ms (Views: 374.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-02-27 09:02:02 -0700
+Processing by PostsController#new as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (38.4ms)
+  Rendered posts/new.html.erb within layouts/application (49.6ms)
+Completed 200 OK in 85ms (Views: 83.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2019-02-27 09:02:40 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[35mAuthor Exists (0.3ms)[0m  SELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 1]]
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 33ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/authors" for ::1 at 2019-02-27 09:02:40 -0700
+Processing by AuthorsController#index as HTML
+  [1m[36mAuthor Load (0.2ms)[0m  [1mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 53ms (Views: 51.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/authors/4" for ::1 at 2019-02-27 09:02:51 -0700
+Processing by AuthorsController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[35mAuthor Load (0.2ms)[0m  SELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mPost Load (0.3ms)[0m  [1mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = ?[0m  [["author_id", 4]]
+  Rendered authors/show.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/authors/4/posts/new" for ::1 at 2019-02-27 09:02:54 -0700
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"4"}
+  [1m[35mAuthor Exists (0.1ms)[0m  SELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mAuthor Load (0.1ms)[0m  [1mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered posts/_form.html.erb (3.8ms)
+  Rendered posts/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 44ms (Views: 41.1ms | ActiveRecord: 0.3ms)
