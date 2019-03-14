@@ -17,6 +17,18 @@ class PostsController < ApplicationController
   end
 
   def new
+    if params[:author_id]
+      if Author.find_by_id(params[:author_id])
+        @author = Author.find_by_id(params[:author_id])
+        @post = Post.new
+        @post.author = @author
+        redirect_to author_post_path(@author, @post)
+      end
+
+
+    else
+
+    end
     @post = Post.new
   end
 
