@@ -4409,3 +4409,40 @@ Processing by PostsController#edit as HTML
 Completed 200 OK in 475ms (Views: 417.2ms | ActiveRecord: 2.0ms)
 
 
+Started GET "/authors/123456/posts/1/edit" for ::1 at 2019-03-21 10:05:56 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PostsController#edit as HTML
+  Parameters: {"author_id"=>"123456", "id"=>"1"}
+  [1m[36mAuthor Load (0.5ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 123456], ["LIMIT", 1]]
+Redirected to http://localhost:3000/authors
+Completed 302 Found in 62ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/authors" for ::1 at 2019-03-21 10:05:56 -0400
+Processing by AuthorsController#index as HTML
+  Rendering authors/index.html.erb within layouts/application
+  [1m[36mAuthor Load (0.4ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered authors/index.html.erb within layouts/application (11.7ms)
+Completed 200 OK in 450ms (Views: 438.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/posts/new" for ::1 at 2019-03-21 10:17:26 -0400
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.8ms)[0m  [1m[34mSELECT "authors".* FROM "authors"[0m
+  Rendered posts/_form.html.erb (218.9ms)
+  Rendered posts/new.html.erb within layouts/application (224.5ms)
+Completed 200 OK in 372ms (Views: 305.6ms | ActiveRecord: 6.9ms)
+
+
+Started GET "/authors/1/posts/new" for ::1 at 2019-03-21 10:17:53 -0400
+Processing by PostsController#new as HTML
+  Parameters: {"author_id"=>"1"}
+  [1m[36mAuthor Exists (0.7ms)[0m  [1m[34mSELECT  1 AS one FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/new.html.erb within layouts/application
+  [1m[36mAuthor Load (0.3ms)[0m  [1m[34mSELECT  "authors".* FROM "authors" WHERE "authors"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered posts/_form.html.erb (23.9ms)
+  Rendered posts/new.html.erb within layouts/application (35.4ms)
+Completed 200 OK in 163ms (Views: 137.0ms | ActiveRecord: 1.0ms)
+
+
