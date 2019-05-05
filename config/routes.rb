@@ -11,6 +11,6 @@ Rails.application.routes.draw do
     resources :posts, only: [:show, :index, :new, :edit]
   end
 
-  resources :posts, only: [:show, :index, :new, :edit]
+  resources :posts
 
 end
