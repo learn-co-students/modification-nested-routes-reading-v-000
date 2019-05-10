@@ -8,6 +8,10 @@ class PostsController < ApplicationController
     end
   end
 
+  def new
+    @post = Post.new(author_id: params[:author_id])
+  end
+
   def show
     if params[:author_id]
       @post = Author.find(params[:author_id]).posts.find(params[:id])
@@ -16,14 +20,14 @@ class PostsController < ApplicationController
     end
   end
 
-  def new
-    @post = Post.new
-  end
-
   def create
     @post = Post.new(post_params)
     @post.save
     redirect_to post_path(@post)
+  end
+
+  def edit
+    @post = Post.find(params[:id])
   end
 
   def update
@@ -32,13 +36,9 @@ class PostsController < ApplicationController
     redirect_to post_path(@post)
   end
 
-  def edit
-    @post = Post.find(params[:id])
-  end
-
   private
 
   def post_params
-    params.require(:post).permit(:title, :description)
+    params.require(:post).permit(:title, :description, :author_id)
   end
 end
