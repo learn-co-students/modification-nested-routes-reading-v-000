@@ -17,7 +17,13 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if params[:author_id] && !Author.exists?(params[:author_id])
+      redirect_to authors_path, alert: "Author not found."
+    else
+    @post = Post.new(author_id: params[:author_id])
+    # we pass in params[:author_id] into the new method so we can capture
+    # author_id through a nested route and keep track of it and assign the post to that author
+    end
   end
 
   def create
@@ -33,12 +39,22 @@ class PostsController < ApplicationController
   end
 
   def edit
+    if params[:author_id]
+      author = Author.find_by(id: params[:author_id])
+      if author.nil?
+        redirect_to authors_path, alert: "Author not found."
+      else
+        @post = author.posts.find_by(id: params[:id])
+        redirect_to author_posts_path(author), alert: "Post not found." if @post.nil?
+      end
+    else
     @post = Post.find(params[:id])
+  end
   end
 
   private
 
   def post_params
-    params.require(:post).permit(:title, :description)
+    params.require(:post).permit(:title, :description, :author_id)
   end
 end
