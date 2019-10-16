@@ -1,5 +1,36 @@
 <%= form_for(@post) do |f| %>
   <label>Post title:</label><br>
+
+  <!-- https://learn.co/tracks/full-stack-web-development-v8/module-13-rails/section-10-routes-and-resources/modifying-nested-resources -->
+
+<!--  <!--
+<!--  We could just eliminate that route and only allow post creation through the
+<!--  nested resource. That might be a valid choice in some applications. But
+<!--  we've decided we want to be able to select an author at the time of posting
+<!--  if we haven't used the nested route. Since we're already set up to handle
+<!--  author_id on the controller, all we have to do is augment our
+<!--  posts/_form.html.erb partial to present a list of authors when none is present.
+<!--  -->
+<!--  <!-- new code start -->
+<!--  <% if @post.author.nil? %>
+<!--    <%= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name) %><br>
+<!--  <% end %>
+<!--  <!-- new code end -->
+
+  <!-- And back in our form partial: -->
+  <%= author_id_field(@post) %>
+    <br>
+  <!--
+  Something seems off. Where's our author? Looks like we didn't do a great
+  job babysitting that author_id. We set it up in the new action,
+  but it never made it to the view so that it could get submitted back to
+  the server. Let's fix that. Open up the post form partial and add a hidden
+  field for the :author_id.
+  -->
+  <!-- new code start -->
+  <%= f.hidden_field :author_id %>
+  <!-- new code end -->
+
   <%= f.text_field :title %><br>
 
   <label>Post Description</label><br>

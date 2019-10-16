@@ -1,5 +1,9 @@
 <h1><%= @author.name %></h1>
 
+<!-- https://learn.co/tracks/full-stack-web-development-v8/module-13-rails/section-10-routes-and-resources/modifying-nested-resources -->
+<!-- new code -->
+<%= link_to "New Post", new_author_post_path(@author) %>
+
 <p>Posts:</p>
 <% @author.posts.each do |post| %>
   <div><%= post.title %></div>
