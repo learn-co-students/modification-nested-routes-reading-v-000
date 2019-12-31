@@ -48,7 +48,7 @@ class PostsController < ApplicationController
 
   def update
     @post = Post.find(params[:id])
-    @post.update(post_params) # This needs to be added to the README.
+    @post.update(post_params)
     redirect_to post_path(@post)
   end
 
