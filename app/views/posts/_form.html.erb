@@ -1,5 +1,10 @@
 <%= form_for(@post) do |f| %>
+  <!-- form_for automatically routes to POST posts_controller#create for a new Post -->
   <label>Post title:</label><br>
+
+  <!-- add hidden_field tag to get submitted back to the server -->
+  <%= f.hidden_field :author_id %>
+
   <%= f.text_field :title %><br>
 
   <label>Post Description</label><br>

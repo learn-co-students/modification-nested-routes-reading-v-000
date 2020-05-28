@@ -17,7 +17,8 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    @post = Post.new(author_id: params[:author_id])
+    # we want to make sure that if we capture author_id through a nested route, we keep track of it and assign the post to the author
   end
 
   def create
@@ -39,6 +40,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-    params.require(:post).permit(:title, :description)
+    # added :author_id to strong params so that it can be used for mass-assignment in the create action
+    params.require(:post).permit(:title, :description, :author_id)
   end
 end
