@@ -1,4 +1,7 @@
 <%= form_for(@post) do |f| %>
+  <!-- form_for automatically routes to POST posts_controller#create for a new Post -->
+  <%= author_id_field(@post) %>
+  <br>
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
 
