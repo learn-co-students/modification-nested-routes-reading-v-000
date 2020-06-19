@@ -5,7 +5,7 @@
 1. Understand how to handle modifications (create/update) of nested resources.
 2. Handle errors and validate data from nested resources.
 3. Review the use of view helpers to keep views clean.
-
+##
 ## Lesson
 
 Continuing with our blog application, we're going to extend our nested resources to allow for creating and modifying blog posts by author.
