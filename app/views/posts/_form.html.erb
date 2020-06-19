@@ -1,9 +1,16 @@
 <%= form_for(@post) do |f| %>
+  <%= author_id_field(@post) %><br>
   <label>Post title:</label><br>
+  
   <%= f.text_field :title %><br>
-
   <label>Post Description</label><br>
   <%= f.text_area :description %><br>
-
   <%= f.submit %>
 <% end %>
+
+<!--
+  <%# if @post.author_id.nil? %> <!-- I changed this to avoid an unnecessary call to the database.
+    <%#= f.select :author_id, options_from_collection_for_select(Author.all, :id, :name) %><br>
+  <%# end %>
+  <%#= f.hidden_field :author_id %> <!-- That was an educated guess, but I got it right! Go Rails! 
+-->
