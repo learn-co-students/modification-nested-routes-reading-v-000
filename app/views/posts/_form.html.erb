@@ -1,4 +1,10 @@
 <%= form_for(@post) do |f| %>
+  
+   <% if @post.author.nil? %>
+    <%= author_id_field(@post) %><br>
+  <% end %>
+  <%= f.hidden_field :author_id %>
+
   <label>Post title:</label><br>
   <%= f.text_field :title %><br>
 
