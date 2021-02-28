@@ -1,6 +1,6 @@
 # Modifying Nested Resources
 
-## Objectives
+##x Objectives
 
 1. Understand how to handle modifications (create/update) of nested resources.
 2. Handle errors and validate data from nested resources.
