@@ -4,5 +4,9 @@
 
 <p>Posts:</p>
 <% @author.posts.each do |post| %>
-  <div><%= post.title %></div>
+  <!-- <div><%= post.title %></div> -->
+  <div><%= link_to post.title, author_post_path(post.author, post) %></div>
+
+
+
 <% end %>
